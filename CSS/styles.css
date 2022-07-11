@@ -24,6 +24,7 @@
 html {
 	box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
@@ -60,7 +61,7 @@ ul {
 .header {
 	padding-top: 25px;
 	padding-bottom: 25px;
-	border-bottom: 1px solid #ECECEC;
+	border-bottom: 1px solid #ececec;
 }
 
 .container {
@@ -70,6 +71,7 @@ ul {
 	padding-right: 15px;
 	padding-left: 15px;
 }
+
 /* Позиціювання шапки */
 .nav {
 	display: flex;
@@ -90,11 +92,13 @@ ul {
 	font-size: 26px;
 	line-height: 1.19;
 }
+
 .main-nav {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
+
 /* Сайт зараз */
 
 .site-nav {
@@ -102,6 +106,7 @@ ul {
 	align-items: center;
 	margin-left: 93px;
 }
+
 .site-nav .item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -160,7 +165,16 @@ ul {
 .hero {
 	padding-top: 200px;
 	padding-bottom: 200px;
-	margin: 0;
+	height: 600px;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
 	background-color: #2f303a;
 }
 
@@ -218,6 +232,46 @@ ul {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.item-box::before {
+	display: block;
+	content: "";
+	height: 120px;
+    background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background: #F5F4FA;
+    border-radius: 4px;
+	margin-bottom: 30px;
+}
+
+.icon-antenna::before{
+	background-image: url(../images/antenna.svg);
+    background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+.icon-clock::before {
+	background-image: url(../images/clock.svg);
+    background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+.icon-diagram::before {
+	background-image: url(../images/diagram.svg);
+    background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+.icon-astronaut::before {
+	background-image: url(../images/astronaut.svg);
+    background-size: auto;
+	background-repeat: no-repeat;
+	background-position: center; 
 }
 
 .list-items {
@@ -286,7 +340,6 @@ ul {
 	margin-top: 0;
 	margin-bottom: 0;
 
-
 	color: #757575;
 	font-weight: 400;
 	font-size: 16px;
@@ -298,7 +351,7 @@ ul {
 .footer {
 	background-color: #2f303a;
 	padding-top: 60px;
-	padding-bottom: 60px; 
+	padding-bottom: 60px;
 }
 
 .footer-nav {
@@ -417,7 +470,7 @@ ul {
 .items .subject {
 	margin-bottom: 4px;
 	text-align: start;
-	
+
 	color: var(--title-color);
 	font-weight: 700;
 	font-size: 18px;

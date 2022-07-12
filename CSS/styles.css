@@ -39,6 +39,7 @@ html {
 	--accent-color: #2196f3;
 	--primary-btn-bgc: #f5f4fa;
 	--accent-btn-color: #ffffff;
+	--primary-icon-color: #AFB1B8;
 }
 
 body {
@@ -134,17 +135,25 @@ ul {
 }
 
 /* ПОшта з телефоном */
-.more {
+.more.list {
 	margin-left: auto;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .more .item:not(:last-child) {
 	margin-right: 50px;
 }
 
+.icon-nav {
+	margin-right: 10px;
+}
+
 .more .more-link {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-top: 8px;
 	padding-bottom: 8px;
 
@@ -159,6 +168,7 @@ ul {
 .more .more-link:hover,
 .more .more-link:focus {
 	color: #2196f3;
+	fill: var(--accent-color);
 }
 
 /* Герой */
@@ -247,28 +257,28 @@ ul {
 }
 
 .icon-antenna::before{
-	background-image: url(../images/antenna.svg);
+	background-image: url(../images/SVG/antenna.svg);
     background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center; 
 }
 
 .icon-clock::before {
-	background-image: url(../images/clock.svg);
+	background-image: url(../images/SVG/clock.svg);
     background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center; 
 }
 
 .icon-diagram::before {
-	background-image: url(../images/diagram.svg);
+	background-image: url(../images/SVG/diagram.svg);
     background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center; 
 }
 
 .icon-astronaut::before {
-	background-image: url(../images/astronaut.svg);
+	background-image: url(../images/SVG/astronaut.svg);
     background-size: auto;
 	background-repeat: no-repeat;
 	background-position: center; 
@@ -321,12 +331,24 @@ ul {
 	padding-top: 0;
 }
 
+/* Члени команди */
+.section.section-team {
+	background: #F5F4FA;
+}
+
+.team-box {
+	width: 270px;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+	background-color: #ffffff;
+}
+
 .text-container {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
-/* Члени команди */
 .section .section-name {
 	margin-bottom: 10px;
 
@@ -338,13 +360,51 @@ ul {
 
 .section .profession {
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 16px;
 
 	color: #757575;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.19;
 	text-align: center;
+}
+
+.network {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.inst {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	fill: var(--primary-icon-color);
+}
+
+.network:not(:last-child){
+	margin-right: 10px;
+}
+.net {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inst:focus,
+.inst:hover {
+	fill: var(--accent-btn-color);
+	background-color: var(--accent-color);
+}
+
+/* База клієнтів */
+.section-client {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	background-color: #ffffff;
 }
 
 /* Футер */
